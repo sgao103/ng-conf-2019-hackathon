@@ -201,3 +201,5 @@ POST https://us-central1-ng-conf-2019-hackathon.cloudfunctions.net/submit?orderI
 _(you will need to provide an `Authorization: Bearer your-token-here` header when submitting)_
 
 Go to <https://joeskeen.github.io/ng-conf-2019-hackathon/> to log in with GitHub and get your access token.
+
+Having issues with the api? Contact Joe Skeen on the ng-conf app.
