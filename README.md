@@ -1,3 +1,13 @@
+> **Announcement**
+>
+> Due to technical issues during the scheduled hackathon event, the new contest schedule
+> will be as follows:
+> **Now** start coding your solution
+> **Wednesday 7:00 AM** Rest API will be published on this document
+> **Wednesday 9:00 AM** The first order will be published
+> **Every hour on the hour from Wednesday 9:00 AM to Thursday 7:00 PM** a new order will be published
+> **Friday Morning** winner will be announced in front of all of ng-conf.  Glory and prizes will be had.
+
 # ng-conf 2019 hackathon instructions
 
 Welcome, intrepid engineer to Gamma Interstellar Shipping company! We are the first
