@@ -63,7 +63,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<img\n  src=\"https://www.ng-conf.org/wp-content/uploads/2018/09/logo-hero.png\"\n  class=\"logo\"\n/>\n<h1>ng-hackathon 2019</h1>\n<a\n  href=\"https://github.com/joeskeen/ng-conf-2019-hackathon/blob/gh-pages/README.md\"\n  target=\"_blank\"\n  >hackathon instructions here</a\n>\n<ng-container *ngIf=\"!token\">\n  <div>\n    <button (click)=\"login()\">Log In</button>\n  </div>\n</ng-container>\n<ng-container *ngIf=\"token\">\n  <h2>Welcome, {{ userName }}</h2>\n  <label>Your auth token </label>\n  <textarea [innerText]=\"token\" readonly></textarea>\n</ng-container>\n<p>\n  Get all published orders:\n  <code\n    >GET\n    <a\n      href=\"https://us-central1-ng-conf-2019-hackathon.cloudfunctions.net/orders\"\n      target=\"_blank\"\n      >https://us-central1-ng-conf-2019-hackathon.cloudfunctions.net/orders</a\n    ></code\n  >\n</p>\n<p>\n  Submit an order:\n  <code\n    >POST\n    https://us-central1-ng-conf-2019-hackathon.cloudfunctions.net/submit?orderId=THE_ORDERID_YOU_ARE_SUBMITTING_A_SOLUTION_FOR</code\n  >\n  <em\n    >(you will need to provide an Authorization:\n    <code>Bearer &lt;your-token-here&gt;</code> header when submitting)</em\n  >\n</p>\n"
+module.exports = "<img\n  src=\"https://www.ng-conf.org/wp-content/uploads/2018/09/logo-hero.png\"\n  class=\"logo\"\n/>\n<h1>ng-hackathon 2019</h1>\n<a\n  href=\"https://github.com/joeskeen/ng-conf-2019-hackathon/blob/gh-pages/README.md\"\n  target=\"_blank\"\n  >hackathon instructions here</a\n>\n<ng-container *ngIf=\"!token\">\n  <div>\n    <button (click)=\"login()\">Log In</button>\n  </div>\n</ng-container>\n<ng-container *ngIf=\"token\">\n  <h2>Welcome, {{ user }}</h2>\n  <label>Your auth token </label>\n  <textarea [innerText]=\"token\" readonly></textarea>\n</ng-container>\n<p>\n  Get all published orders:\n  <code\n    >GET\n    <a\n      href=\"https://us-central1-ng-conf-2019-hackathon.cloudfunctions.net/orders\"\n      target=\"_blank\"\n      >https://us-central1-ng-conf-2019-hackathon.cloudfunctions.net/orders</a\n    ></code\n  >\n</p>\n<p>\n  Submit an order:\n  <code\n    >POST\n    https://us-central1-ng-conf-2019-hackathon.cloudfunctions.net/submit?orderId=THE_ORDERID_YOU_ARE_SUBMITTING_A_SOLUTION_FOR</code\n  >\n  <em\n    >(you will need to provide an Authorization:\n    <code>Bearer &lt;your-token-here&gt;</code> header when submitting)</em\n  >\n</p>\n"
 
 /***/ }),
 
@@ -102,7 +102,7 @@ __webpack_require__.r(__webpack_exports__);
 var AppComponent = /** @class */ (function () {
     function AppComponent(fbAuth) {
         this.fbAuth = fbAuth;
-        this.userName = null;
+        this.user = null;
         this.token = null;
     }
     AppComponent.prototype.ngOnInit = function () {
@@ -112,7 +112,7 @@ var AppComponent = /** @class */ (function () {
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_b) {
                 switch (_b.label) {
                     case 0:
-                        this.userName = u.displayName;
+                        this.user = u.email;
                         _a = this;
                         return [4 /*yield*/, u.getIdToken()];
                     case 1:
