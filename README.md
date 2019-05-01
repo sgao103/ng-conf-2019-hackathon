@@ -3,10 +3,11 @@
 > Due to technical issues during the scheduled hackathon event, the new contest schedule
 > will be as follows:
 > **Now** start coding your solution
-> **Wednesday 7:00 AM** Rest API will be published on this document
-> **Wednesday 9:00 AM** The first order will be published
+> **Wednesday 7:00 AM** Rest API is published on this document (see below)
+> _the sample input from below will be available via the REST API until shortly before the start of the contest (9 AM), when all stats will be reset_ > **Wednesday 9:00 AM** The first order will be published via the REST API
 > **Every hour on the hour from Wednesday 9:00 AM to Thursday 7:00 PM** a new order will be published
-> **Friday Morning** winner will be announced in front of all of ng-conf.  Glory and prizes will be had.
+> **Thursday night at midnight** no more submissions will be allowed
+> **Friday Morning** winner will be announced in front of all of ng-conf. Glory and prizes will be had.
 
 # ng-conf 2019 hackathon instructions
 
@@ -140,7 +141,10 @@ a distance specified in parsecs.
 ## Output
 
 Once you have determined the best route, you will need to submit your solution. The body
-must be a JSON array. Each element of the array will list the next destination in the route. For wormholes, you will need to specify the step as an object as seen below.
+must be a JSON array. Each element of the array will list the next destination in the route.
+In space, the shortest distance between two points is a straight line. Each of your flights
+will also be a straight line (we can't program the ships to do a curved path around a hazard,
+for example). For wormholes, you will need to specify the step as an object as seen below.
 
 For example:
 
@@ -179,3 +183,21 @@ scored and points awarded according to the following rules:
   submission received first will be awarded more points than subsequent submissions.
 
 The engineer with the most points at the end of the contest will be declared the winner.
+
+## Contest API information
+
+Get all published orders:
+
+```
+GET https://us-central1-ng-conf-2019-hackathon.cloudfunctions.net/orders
+```
+
+Submit an order:
+
+```
+POST https://us-central1-ng-conf-2019-hackathon.cloudfunctions.net/submit?orderId=THE_ORDERID_YOU_ARE_SUBMITTING_A_SOLUTION_FOR
+```
+
+_(you will need to provide an `Authorization: Bearer your-token-here` header when submitting)_
+
+Go to <https://joeskeen.github.io/ng-conf-2019-hackathon/> to log in with GitHub and get your access token.
