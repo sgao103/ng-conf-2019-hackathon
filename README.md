@@ -163,7 +163,7 @@ For example:
 >
 > Your submission for a shipping order will be automatically rejected if you have
 > submitted too recently. After your first submission for an order, you must wait
-> 1 minute before submitting again. After your second submission for the same ordwer,
+> 1 minute before submitting again. After your second submission for the same order,
 > you must wait 2 minutes, and so on. It is therefore in your best interest to only
 > submit solutions you are confident in. DDoS attacks and other API abuse will not be
 > tolerated.
